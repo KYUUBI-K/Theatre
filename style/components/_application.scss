@@ -1,5 +1,8 @@
 .application {
   margin-top: 120px;
+  @include large {
+    margin-top: 160px;
+  }
 
   &__title {
     @include laptop {
@@ -19,7 +22,7 @@
     }
     @include large {
       padding: 0 29px;
-      margin-top: 100px;
+      margin-top: 60px;
     }
   }
 
@@ -34,6 +37,9 @@
       margin: 0;
       row-gap: 0;
       margin-top: 80px;
+      @include large {
+        margin-top: 60px;
+      }
     }
     &__phone-box,
     &__address-box {
@@ -67,15 +73,27 @@
     @include laptop {
       grid-template-columns: 1fr 270px;
     }
+    @include medium {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //   grid-template-columns: 1fr 509px;
+    }
   }
 
   &__form__input-box {
     display: grid;
     grid-template-columns: 180px 180px;
     gap: 30px;
+    @include medium {
+      grid-template-columns: 230px 230px;
+    }
   }
   &__form-message {
     height: 100px;
+    @include medium {
+      width: 509px;
+    }
   }
   &__form-input,
   &__form-message {
@@ -93,6 +111,11 @@
     display: flex;
     justify-content: space-between;
     row-gap: 150px;
+    @include medium {
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 30px;
+    }
   }
   &__form__box-text {
     color: #989898;
@@ -104,5 +127,8 @@
   }
   &__form__box-btn {
     width: 190px;
+  }
+  &__form-input {
+    height: 35px;
   }
 }
