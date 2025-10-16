@@ -24,7 +24,6 @@ const productionSwiper = new Swiper(".productions__swiper-slider", {
 
 const partnersSwiper = new Swiper(".partners__swiper-slider", {
   slidesPerView: 4,
-  // simulateTouch: false,
   navigation: {
     nextEl: ".partners__slider__next",
     prevEl: ".partners__slider__prev",
@@ -32,10 +31,7 @@ const partnersSwiper = new Swiper(".partners__swiper-slider", {
 
   breakpoints: {
     1440: { spaceBetween: 28, slidesPerView: 4 },
-    993: {
-      spaceBetween: 27,
-      slidesPerView: 2.52,
-    },
+    993: { spaceBetween: 27, slidesPerView: 2.52 },
     768: { spaceBetween: 28, slidesPerView: 2.52 },
     576: { slidesPerView: 1.79 },
     320: { slidesPerView: 0.9 },

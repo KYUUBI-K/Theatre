@@ -994,7 +994,7 @@ textarea {
   margin-top: 89px;
 }
 .raiting__content {
-  background-image: url("/assets/img/raiting_background.jpg");
+  background-image: url("../assets/img/raiting_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
