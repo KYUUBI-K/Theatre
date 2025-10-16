@@ -1,0 +1,51 @@
+.partners {
+  margin-top: 150px;
+  @include large {
+    margin-top: 90px;
+  }
+  @include small {
+    margin-top: 70px;
+  }
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  &__title {
+    @include laptop {
+      padding-left: 80px;
+    }
+    @include large {
+      padding-left: 0;
+    }
+  }
+  &__inner {
+    margin-top: 147px;
+    @include laptop {
+      padding-left: 180px;
+      padding-right: 105px;
+    }
+    @include large {
+      padding: 0 29px;
+      margin-top: 100px;
+    }
+    @include small {
+      padding: 0 19px;
+    }
+    @include mobile {
+      margin-top: 70px;
+      padding: 0 15px;
+    }
+  }
+  &__slider-slide-box {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    width: 256px;
+    @include laptop {
+      gap: 100px;
+      @include mobile {
+        gap: 50px;
+      }
+    }
+  }
+}

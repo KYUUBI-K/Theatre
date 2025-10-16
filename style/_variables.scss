@@ -1,0 +1,20 @@
+:root {
+  --color-black: #333;
+  --color-gold: #d1a954;
+  --color-white: #fff;
+  --color-gray-light: #c4c4c4;
+  --color-gray-alt: #989898;
+
+  --font--family-base: "Open Sans Regular", sans-serif;
+  --font--family-accent: "Open Sans Condensed", sans-serif;
+
+  --container--width: 1110px;
+  --container--padding-x: 15px;
+  --section--padding-y: 75px;
+
+  --border: 1px solid $color-gold;
+  --button-height: 50px;
+  --input-height: 35px;
+
+  --transition-duration: 0.2s;
+}

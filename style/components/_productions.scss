@@ -1,0 +1,116 @@
+.productions {
+  margin-top: 150px;
+  @include large {
+    margin-top: 90px;
+  }
+  @include small {
+    margin-top: 110px;
+  }
+  &__title {
+    @include laptop {
+      padding-left: 80px;
+    }
+    @include large {
+      padding-left: 0;
+    }
+  }
+  &__inner {
+    margin-top: 78px;
+    padding-left: 150px;
+    @include laptop {
+      margin-top: 100px;
+      padding-left: 191px;
+      padding-right: 111px;
+    }
+    @include large {
+      padding: 0 39px;
+      margin-top: 60px;
+    }
+    @include small {
+      padding: 0 33px;
+    }
+  }
+  &__swiper-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__swiper-wrapper {
+    display: flex;
+  }
+  &__slider {
+    &-slide {
+      position: relative;
+    }
+    &-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(51, 51, 51, 0.65);
+      transition: background 0.4s ease;
+    }
+    &-slide:hover &-svg {
+      display: flex;
+    }
+
+    &-slide:hover &-title,
+    &-slide:hover &-date {
+      display: none;
+    }
+
+    &-slide:hover:after {
+      background: none;
+    }
+
+    &-title {
+      position: absolute;
+      z-index: 5;
+      top: 40px;
+      left: 40px;
+      font-family: var(--font--family-accent);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      transition: opacity 0.4s ease;
+    }
+    &-date {
+      position: absolute;
+      z-index: 5;
+      transform: rotate(-90deg);
+      left: -10px;
+      bottom: 95px;
+      font-family: var(--font--family-accent);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      transition: opacity 0.4s ease;
+    }
+    &-svg {
+      opacity: 1;
+      visibility: visible;
+      width: 100px;
+      height: 100px;
+      display: none;
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      background: var(--color-gold);
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    &-svg svg {
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

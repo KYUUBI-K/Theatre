@@ -1,0 +1,150 @@
+.hero {
+  display: flex;
+  column-gap: 71px;
+  @include laptop {
+    justify-content: center;
+    padding-left: 95px;
+  }
+  @include large {
+    padding-left: 0;
+  }
+  @include small {
+    padding: 0 10px;
+  }
+
+  &__title {
+    padding-top: 308px;
+
+    font-family: var(--font--family-accent);
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    margin-bottom: 54px;
+    @include laptop {
+      padding-top: 210px;
+      margin-bottom: 21px;
+    }
+    @include large {
+      padding-top: 110px;
+      font-size: 36px;
+      letter-spacing: 1.8px;
+      text-align: center;
+    }
+    @include small {
+      padding-top: 15px;
+      margin-bottom: 15px;
+    }
+    @include mobile {
+      padding-top: 10px;
+      font-size: 24px;
+    }
+  }
+
+  &__info p {
+    max-width: 591px;
+    font-family: var(--font--family-base);
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    @include laptop {
+      max-width: 690px;
+    }
+    @include large {
+      max-width: 540px;
+    }
+    @include small {
+      max-width: 510px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    width: 160px;
+    margin-top: 30px;
+    @include laptop {
+      margin-left: 11px;
+    }
+    @include large {
+      margin-left: 0;
+    }
+    @include small {
+      margin-top: 10px;
+    }
+  }
+  &__poster {
+    margin-top: 191px;
+    margin-bottom: 56px;
+    width: 350px;
+  }
+  @include laptop {
+    &__poster {
+      display: none;
+    }
+  }
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+}
+.swiper-slide img {
+  width: 100%;
+  display: block;
+}
+
+.poster__nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 120px;
+  margin-top: 55px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  font-family: var(--font--family-accent);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}

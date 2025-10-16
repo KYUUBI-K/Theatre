@@ -1,0 +1,52 @@
+.contacts {
+  display: flex;
+  align-items: end;
+  position: absolute;
+  background-color: hsla(0, 0%, 20%, 0.75);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  @include large {
+    display: none;
+  }
+
+  &-vertical {
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 86px;
+  }
+
+  & p {
+    position: relative;
+    font-family: var(--font--family-accent);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-gray-light);
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 160px;
+    letter-spacing: 1.8px;
+  }
+
+  & p::before {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 3px;
+    height: 80px;
+    background-color: var(--color-white);
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 25px;
+    align-items: center;
+  }
+}
