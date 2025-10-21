@@ -1,17 +1,24 @@
 .footer {
-  margin-top: 150px;
+  margin-top: 60px;
   padding-bottom: 30px;
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #565656;
+    padding-top: 30px;
+  }
+  &__inner p {
     color: var(--color-gray-alt);
     font-family: var(--font--family-base);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    border-top: 1px solid #565656;
-    padding-top: 30px;
+  }
+  &-text {
+    @include medium {
+      max-width: 307px;
+    }
   }
 }

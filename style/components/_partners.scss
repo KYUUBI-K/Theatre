@@ -28,19 +28,17 @@
       padding: 0 29px;
       margin-top: 100px;
     }
-    @include small {
-      padding: 0 19px;
-    }
-    @include mobile {
-      margin-top: 70px;
-      padding: 0 15px;
-    }
+  }
+  &__slider-slide {
+    width: auto;
+    display: flex;
+    justify-content: center;
   }
   &__slider-slide-box {
     display: flex;
     flex-direction: column;
     gap: 140px;
-    width: 256px;
+    width: 100;
     @include laptop {
       gap: 100px;
       @include mobile {

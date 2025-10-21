@@ -1,5 +1,11 @@
 .raiting {
   margin-top: 89px;
+  @include laptop {
+    margin-top: 150px;
+  }
+  @include large {
+    margin-top: 89px;
+  }
 
   &__content {
     background-image: url("../assets/img/raiting-background.jpg");

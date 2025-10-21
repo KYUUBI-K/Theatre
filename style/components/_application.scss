@@ -1,7 +1,13 @@
 .application {
   margin-top: 120px;
+  @include laptop {
+    margin-top: 180px;
+  }
   @include large {
     margin-top: 160px;
+  }
+  @include medium {
+    margin-top: 150px;
   }
 
   &__title {
@@ -19,6 +25,7 @@
       flex-direction: column-reverse;
       padding-left: 180px;
       padding-right: 105px;
+      margin-top: 100px;
     }
     @include large {
       padding: 0 29px;
@@ -40,6 +47,10 @@
       @include large {
         margin-top: 60px;
       }
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
     &__phone-box,
     &__address-box {
@@ -53,6 +64,19 @@
       line-height: normal;
       letter-spacing: 0.8px;
       text-transform: uppercase;
+      @include mobile {
+        align-items: center;
+      }
+    }
+
+    &__address-box {
+      @include laptop {
+        align-items: end;
+      }
+      @include mobile {
+        align-items: center;
+        font-size: 14px;
+      }
     }
     &__address-box .application-info {
       text-decoration: solid;
@@ -74,26 +98,25 @@
       grid-template-columns: 1fr 270px;
     }
     @include medium {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      //   grid-template-columns: 1fr 509px;
+      grid-template-columns: 1fr;
     }
   }
 
   &__form__input-box {
     display: grid;
+    width: 100%;
     grid-template-columns: 180px 180px;
     gap: 30px;
-    @include medium {
-      grid-template-columns: 230px 230px;
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
     }
   }
   &__form-message {
     height: 100px;
-    @include medium {
-      width: 509px;
-    }
   }
   &__form-input,
   &__form-message {
@@ -130,5 +153,10 @@
   }
   &__form-input {
     height: 35px;
+  }
+  &-street {
+    @include mobile {
+      max-width: 150px;
+    }
   }
 }
