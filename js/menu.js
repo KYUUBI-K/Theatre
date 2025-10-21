@@ -19,3 +19,17 @@ closeMenuBtn.addEventListener("click", closeMenu);
 navLinks.forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
+document.addEventListener("click", (event) => {
+  const isMenuOpen = menu.classList.contains("is-open");
+  if (!isMenuOpen) {
+    return;
+  }
+
+  const clickedOutside = !menu.contains(event.target);
+
+  const isClickOnOpenBtn = openMenuBtn.contains(event.target);
+
+  if (clickedOutside && !isClickOnOpenBtn) {
+    closeMenu();
+  }
+});
