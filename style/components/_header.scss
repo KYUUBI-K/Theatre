@@ -127,6 +127,7 @@
     row-gap: 35px;
     @include small {
       align-items: center;
+      padding-left: 0;
     }
   }
   &-link {
@@ -147,6 +148,8 @@
     padding: 0 50px;
     @include small {
       flex-direction: column;
+      gap: 30px;
+      margin-top: 40px;
     }
   }
 }

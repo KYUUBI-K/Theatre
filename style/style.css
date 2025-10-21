@@ -488,6 +488,7 @@ textarea {
 @media (max-width: 576px) {
   .mobile__menu-list {
     align-items: center;
+    padding-left: 0;
   }
 }
 .mobile__menu-link {
@@ -509,6 +510,8 @@ textarea {
 @media (max-width: 576px) {
   .mobile__menu__media-list {
     flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
   }
 }
 
